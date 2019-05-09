@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks
+using System.Threading.Tasks;
 
 namespace PigLatin
 {
@@ -11,6 +11,5 @@ namespace PigLatin
         static void Main(string[] args)
         {
         }
-        this is new
     }
 }
