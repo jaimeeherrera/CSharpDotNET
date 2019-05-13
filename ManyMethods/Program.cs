@@ -21,7 +21,15 @@ namespace ManyMethods
             //inches;
             //inches();
             //Echo
-            Echo();
+            //Echo();
+            //Kilograms Method
+            //Kilograms();
+            //Date
+            //Date();
+            //Age
+            //Age();
+            //Guess
+            Guess();
 
 
         }
@@ -93,18 +101,58 @@ namespace ManyMethods
 
         public static void Echo()
         {
-            Console.WriteLine("Enter your favorite kinds of candy?");
+            //writes the line that asks the user the a question
+            Console.WriteLine("Lets say you are on top of the world what word would you shout?: ");
+            //creates the input in to a string so it can be printed with upper and lower
+            string echo1 = Console.ReadLine().ToUpper();
+            string echo2 = echo1.ToLower();
+            //prints the code 
+            Console.WriteLine(echo1);
+            Console.WriteLine(echo2);
+            Console.WriteLine(echo2);
             Console.Read();
-            string Candy1 = Console.ReadLine();
-            Console.WriteLine("These are your favorite: " + Candy1);
-            Console.ReadLine(); 
-            
-
+        
         }
 
+        public static void Kilograms()
+        {
+            Console.WriteLine("Please state what your weight is in pounds?: ");
+            int weight = int.Parse(Console.ReadLine());
+            Console.WriteLine("Your correct weight is " + (weight * 0.454) + " in Kilograms!");
+            Console.Read();
+        }
 
+        public static void Date()
+        {
+            Console.WriteLine("The current Date and Time:");
+            DateTime now = DateTime.Now;
+            Console.WriteLine(now);
+            Console.Read();
+        }
 
+        public static void Age()
+        {
+            Console.WriteLine("What year were you born?:");
+            int borndate = int.Parse(Console.ReadLine());
+            Console.WriteLine("You are" + (borndate - 2019) + "years old!");
+            Console.Read();
+        }
 
+        public static void Guess()
+        {
+            Console.WriteLine("I'm thinking of a word, try and guess it!?: ");
+            string guess1 = Console.ReadLine();
+            if (guess1 == "Csharp")
+            {
+                Console.WriteLine("Great job! You guessed corret!");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Sorry that wasn't right, maybe next time!");
+                Console.ReadLine();
+            }
+        }
     }
     }
 
