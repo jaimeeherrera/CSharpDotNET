@@ -140,7 +140,7 @@ namespace ManyMethods
 
         public static void Guess()
         {
-            Console.WriteLine("I'm thinking of a word, try and guess it!?: ");
+            Console.WriteLine("I'm thinking of a word, try and guess it!? ");
             string guess1 = Console.ReadLine();
             if (guess1 == "Csharp")
             {
