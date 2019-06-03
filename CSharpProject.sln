@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tic,Tac,Toe", "Tic,Tac,Toe\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperScissors", "RockPaperScissors\RockPaperScissors.csproj", "{9F89D908-5326-49A1-8B2C-E4FCAE97E28B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterMind", "MasterMind\MasterMind.csproj", "{606CAD89-9B45-413F-9850-C823CEFE950E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gradebook", "Gradebook\Gradebook.csproj", "{F4786695-0BD4-4A8B-B49A-E605EFACFA56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{9F89D908-5326-49A1-8B2C-E4FCAE97E28B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F89D908-5326-49A1-8B2C-E4FCAE97E28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F89D908-5326-49A1-8B2C-E4FCAE97E28B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{606CAD89-9B45-413F-9850-C823CEFE950E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{606CAD89-9B45-413F-9850-C823CEFE950E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{606CAD89-9B45-413F-9850-C823CEFE950E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{606CAD89-9B45-413F-9850-C823CEFE950E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4786695-0BD4-4A8B-B49A-E605EFACFA56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4786695-0BD4-4A8B-B49A-E605EFACFA56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4786695-0BD4-4A8B-B49A-E605EFACFA56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4786695-0BD4-4A8B-B49A-E605EFACFA56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

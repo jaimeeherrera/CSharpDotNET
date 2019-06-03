@@ -7,53 +7,170 @@ using System.Threading.Tasks;
 
 namespace Tic_Tac_Toe
 {
-    class Program
+    class MainClass
     {
-        const int BoardSize = 3;
-        static string[,] board = new string[BoardSize, BoardSize] { { " ", " " , " " }, { " ", " ", " " }, { " ", " ", " " } };
-    
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            ResetBoard();
-            StartGame();
-            Console.Read();
-        }
+            char player = 'X';
+            char[,] board = new char[3, 3];
+            //Intializing Board function
+            Initialize(board);
 
-        #region Print the game board
-        static void PrintBoard()
-        {
-            for (int j = 0; j < BoardSize; j++)
-            //i is the columns 
-            //j is the rows
+            // The Game PLays, until winner/loser/
+            while (true)
             {
-                Console.WriteLine("-------");
-                for (int i = 0; i < BoardSize; i++)
+                Console.Clear();
+                Print(board);
+
+                Console.Write("Please enter row: ");
+                int row = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Please enter column: ");
+                int col = Convert.ToInt32(Console.ReadLine());
+
+                board[row, col] = player;
+
+                //Check if we won. 
+                if (player == board[0, 0] && player == board[0, 1] && player == board[0, 2])
                 {
-                    Console.Write("|" + board[i, j].ToString());
+                    Console.WriteLine(player + " has won the game");
+                    break;
                 }
-                Console.WriteLine("|");
+                if (player == board[0, 0] && player == board[1, 0] && player == board[2, 0])  // Down Board for X Player
+                {
+                    Console.WriteLine("Player X has won the game!");
+                    Console.ReadKey();
+
+                }
+
+                if (player == board[0, 1] && player == board[1, 1] && player == board[2, 1]) // Middle Down
+                {
+                    Console.WriteLine("Player X has won the game!");
+                    Console.ReadKey();
+
+                }
+
+                if (player == board[0, 2] && player == board[1, 2] && player == board[2, 2]) // Right Down
+                {
+                    Console.WriteLine("Player X has won the game!");
+                    Console.ReadKey();
+
+                }
+
+                if (player == board[0, 2] && player == board[1, 1] && player == board[2, 2])
+                {
+                    Console.WriteLine("Player X has won the game!");
+                    Console.ReadKey();
+                }
+
+                if (player == board[1, 0] && player == board[1, 1] && player == board[1, 2])
+                {
+                    Console.WriteLine("Player X has won the game!");
+                    Console.ReadKey();
+
+                }
+
+
             }
-            Console.WriteLine("-------");
-            Console.Read();
-        }
-        #endregion
 
-        static void placeMarker (int RowPos, int ColPos)
-        {
-            int RowIdx = RowPos - 1;
-            int ColIdx = ColPos - 1;
-            board[RowIdx, ColIdx] = currentPlayer;
-            PrintBoard();
-        }
-        static void ResetBoard()
-        {
-            PrintBoard();
-        }
 
-        static void StartGame()
-        {
-            PrintBoard();
+            if (player == 'O')
+            {
+                if (player == board[0, 0] && player == board[0, 1] && player == board[0, 2]) // Across Board for O player
+                {
+                    Console.WriteLine("Player O has won the game!");
+                    Console.ReadKey();
+                    break;
+                }
+
+                if (player == board[0, 0] && player == board[1, 0] && player == board[2, 0])  // Down Board for O Player
+                {
+                    Console.WriteLine("Player O has won the game!");
+                    Console.ReadKey();
+
+                }
+
+                if (player == board[0, 1] && player == board[1, 1] && player == board[2, 1]) // Middle Down
+                {
+                    Console.WriteLine("Player O has won the game!");
+                    Console.ReadKey();
+
+                }
+
+                if (player == board[0, 2] && player == board[1, 2] && player == board[2, 2]) // Right Down
+                {
+                    Console.WriteLine("Player O has won the game!");
+                    Console.ReadKey();
+
+                }
+
+                if (player == board[0, 2] && player == board[1, 1] && player == board[2, 2])
+                {
+                    Console.WriteLine("Player O has won the game!");
+                    Console.ReadKey();
+                }
+
+                if (player == board[1, 0] && player == board[1, 1] && player == board[1, 2])
+                {
+                    Console.WriteLine("Player O has won the game!");
+                    Console.ReadKey();
+                }
+
+
+
+            }
+
+            ChangeTurn(player);
+
+
+            //celebrate for winner 
+            // clear the screen
+            // Print the Board
         }
-        
     }
-}
+    static char ChangeTurn(char currentPlayer)
+        {
+            if (currentPlayer == 'X')
+            {
+                return 'O';
+            }
+            else
+            {
+                return 'X';
+            }
+
+        }
+
+    static void Initialize(char[,] board)
+    {
+        for (int row = 0; row < 3; row++)
+        {
+            for (int col = 0; col < 3; col++)
+            {
+                board[row, col] = ' ';
+            }
+        }
+    }
+        
+        static void Print(char[,] board)
+        {
+        Console.Write("  | 0 | 1 | 2 | ");
+        for (int row = 0; row < 3; row++)
+            {
+            Console.WriteLine(row + " | ");
+            for (int col = 0; col < 3; col++)
+                {      
+                 Console.Write(board[row, col]);
+                 Console.Write(" | ");
+                }
+                Console.WriteLine();
+               
+            }
+            Console.ReadLine();
+        }
+    }
+
+
+         
+        
+      
+    
