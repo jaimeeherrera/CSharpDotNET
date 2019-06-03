@@ -13,7 +13,7 @@ namespace Tic_Tac_Toe
         {
             char player = 'X';
             char[,] board = new char[3, 3];
-            //Intializing Board function
+            //Intializing Board functions
             Initialize(board);
 
             // The Game PLays, until winner/loser/
