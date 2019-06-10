@@ -7,64 +7,76 @@ using System.Threading.Tasks;
 namespace MasterMind
 {
     class Program
-       
+
     {
-        string[] secert = new string[codeLength];
-        string[] colorArray = new string[] { "red", "yellow", "blue" };
-        
+        static string[] color = new string[2];
+        string[] colorArr = new string[] { "red", "yellow", "blue" };
+        static bool gameOver = false;
         static void Main(string[] args)
         {
-            string playername;
-            Console.WriteLine("Let's Play Mastermind!");
-            Console.Write("Please enter your name:");
-            playername = Console.ReadLine();
-            Console.WriteLine("Let's Play {0}" , playername);
+            //intro to game
+            Console.WriteLine("Welcome To MasterMind!");
+            Console.WriteLine("I am thining of 2 Colors! I will give you a few hints after each guess!");
+            Console.WriteLine("The colors can be either RED, YELLOW, BLUE. You just have to guess the correct order to WIN!");
             Console.ReadLine();
-            //Generate Random Secret
-            Random rnd = new Random();
-            for (int i = 0; i < 2; i++)
+            Console.WriteLine("Lets Play!");
+            Console.ReadLine();
+            Console.WriteLine("Pick two colors. Example red yellow");
+            Console.ReadLine();
+            //Generate Code to pull colors
+             Random random = new Random();
+             int random = rnd.Next(0, 2);
+             color[0] = colorsArr[random];
+             random = rnd.Next(0, 2);
+             color[1] = colorsArr[random];*/
+          
+
+            while (gameOver == false)
             {
-                secret[i] = colorArray[rnd.Next(0, 2)];
-            }
-            //Ask user for input
-            Console.WriteLine("Enter your guess:");
-            string[] guess = Console.ReadLine().Split('');
-            if (guess[0]==secret [0]&& guess[10==secret[1])
-                    {
-                Console.WriteLine "You won!"
-            }
-            else
-            { 
-                int correctColorCount = 0;
-                int correctPositionCount = 0;
-            if (secret.Contains(guess[0]))
-            {
-                correctColorCount++;
-            }
-            if (secret.Contains(guess[1]))
-            {
-                secretColorCount++;
-            }
-            if (guess[0]==secret[0])
+                Console.WriteLine("Print 2 Colors enter your guess[Color 1 Color2]: ");
+                string[] guess = Console.ReadLine().Split(' ');
+                if (guess[0] == color[0] && guess[1] == color[1])
                 {
-                    correctPositionCount++;
+                    Console.WriteLine("You have Won!");
+                    gameOver = true;
                 }
-            if (guess[1])==secret[1]
-            //Create a color array to pull from
-            ColorArray["Yellow", "Red", "Blue"];
+                else
+                {
+                    int correctColorCount = 0;
+                    int correctPositionCount = 0;
+                    for (int i = 0; i < 2; i++)
+                    {
+                        if (guess[0] == color[0] || guess[0] == color[1])
+                        {
+                            correctColorCount++;
+                        }
+                        if (guess[1] == color[1] || guess[1] == color[0])
+                        {
+                            correctColorCount++;
+                        }
+                    }
+                    for (int i = 0; i < 2; i++)
+                    {
+                        if (guess[0] == color[0])
+                        {
+                            correctPositionCount++;
+                        }
+                        if (guess[1] == color[1])
+                        {
+                            correctPositionCount++;
+                        }
 
-
-            //get the player to guess the color
-            //if the color is correct it will say Congrats
+                    }
+                    Console.WriteLine();
+                }
+            }
         }
 
-        public void GenerateRandomSecret()
-        {
-            Random rnd = new Random();
-            int randomIndex = rnd.Net(0, 2);
-            secret[0] colorrarray[randomIndex];
-            randomIndex = rnd.Next(0, 2);
-            GenerateRan 1 = colorrArray[randomIndex];
-        }
     }
 }
+
+
+
+
+
+
