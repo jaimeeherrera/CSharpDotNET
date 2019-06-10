@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,47 +9,70 @@ namespace Gradebook
 {
     class Program
     {
+        static string name;
         static void Main(string[] args)
         {
-            //asking user if they want to quit
-            Console.WriteLine("Welcome to your amazing Grade Book!If you would like to exit at anytime type quit!");
 
-            Dictionary<string, string> studentGrades = new Dictionary<string, string>();
-            while (name.ToLower() != "quit")
+            //Dictionary 
+            Dictionary<string, string> Gradebook = new Dictionary<string, string>();
+
+            while (name != "quit")
             {
-                Console.WriteLine("Please enter grade, seperated by a blank spafce: ");
-                string strGrades = Console.ReadLine();
-                studentGrades.Add(name, strGrades);
-                Console.WriteLine("Enter student's name, or 'quit' to finsih;");
+
+                string quit = "quit";
+
+                Console.WriteLine("Welcome to your Grade Book! Enter student's name or 'quit' to finish");
+                string grades = " ";
                 name = Console.ReadLine();
 
+                if (name.ToLower() == quit)
+
+                {
+                    break; 
+                }
+
+                //ask for grades
+                Console.WriteLine("Enter {0}'s grades,  or type 'quit' for gradebook results.", name);
+                grades = Console.ReadLine();
+                // add to dictionary
+                Gradebook.Add(name, grades);
+                Console.Clear();
+
+
+
             }
 
-            string sName;
-            string sGrades;
-            string[] arrayGrades;
-            int[] iGrades;
-            foreach (var i in studentGrades.Keys)
+            Console.Clear();
+
+            foreach (var name in Gradebook.Keys) 
             {
-                sName = i;
-                sGrades = studentGrades[i];
-                ArrayGrades = sGrades.Split('');
+                // Split Strings
+                string[] gradesSplit = Gradebook[name].Split(' ');
+                int[] grades2nums = Array.ConvertAll(gradesSplit, int.Parse);
+                //find highest grade
+                int highestGrade = grades2nums.Max();
+                //lowest grade
+                int lowestGrade = grades2nums.Min();
+                //average grade
+                double avgGrade = grades2nums.Average();
+                // all of calculations for student
+                Console.WriteLine("Student: " + name);
+                Console.WriteLine("Highest Grade: " + highestGrade);
+                Console.WriteLine("Lowest Grade: " + lowestGrade);
+                Console.WriteLine("Avg Grade: " + avgGrade);
+                Console.WriteLine("________");
+
+
 
             }
-            iGrades = Array.ConvertAll(arrayGrades, int.Parse);
-            Console.Read()l
-            // now the user entered 'quit', we need to calculate the grades 
-            // we need to loop through the studentGrades dictionary
-            foreach ( var i in studentGrades.Keys)
-            {
-                string g = studentGrades[i];
-                Console.WriteLine($"Name; {i}");
-                Console.WriteLine($"Grades; {studentGrades[i]}");
-            }
-            //have user enter the name 
-            //have user enter grade 
-            //create this as a loop 
-            //when quit display the name and grade 
+
+            Console.Read();
+
         }
+
+
     }
 }
+
+
+
