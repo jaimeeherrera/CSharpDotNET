@@ -10,6 +10,7 @@ namespace Gradebook
     class Program
     {
         static string name;
+
         static void Main(string[] args)
         {
 
