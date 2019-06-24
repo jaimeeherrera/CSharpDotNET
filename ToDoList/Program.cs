@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -28,6 +27,7 @@ namespace ToDoItems
                 Console.WriteLine("Would you like to add an item Yes/No ?");
                 Input = Console.ReadLine();
             }
+            //
             foreach (ToDoItem item in myList)
             {
                 Console.WriteLine(item.myToDoList());
