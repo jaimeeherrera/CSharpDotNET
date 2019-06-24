@@ -1,34 +1,58 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ToDoList
+namespace ToDoItems
 {
-    class Program
+    class MainClass
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-       
-        class ToDoItem
-        {
-            string question = "Would you like to add a ToDo item? yes/no";
-            Console.WriteLine (question);
-            string answer = Console.ReadLine().ToLower();
-
-            
-           
-            public ToDoItem()
+            //ask user for input 
+            string Input;
+            Console.WriteLine("Would you like to add a new item to the list  YES OR NO?");
+            Input = Console.ReadLine();
+            //create list 
+            List<ToDoItem> myList = new List<ToDoItem>();
+            while (Input != "no")
             {
-                public string 
-                //Ask Discription Due Date and Proirity
-                //Instantiate ToDo Item object 
-               //  to DoItem my Item= new(description, Due date, priority);
-                // Add myItem to your list  
+                Console.WriteLine("Please enter a description for new item:");
+                string description = Console.ReadLine();
+                Console.WriteLine("Please enter a due date for the item:");
+                string dueDate = Console.ReadLine();
+                Console.WriteLine("Please enter a priority, (High/ Normal/ Low):");
+                string priority = Console.ReadLine();
+                ToDoItem myItem = new ToDoItem(description, dueDate, priority);
+                myList.Add(myItem);
+                Console.WriteLine("Would you like to add an item Yes/No ?");
+                Input = Console.ReadLine();
+            }
+            foreach (ToDoItem item in myList)
+            {
+                Console.WriteLine(item.myToDoList());
             }
         }
+        class ToDoItem
+        {
+            public string Description { get; set; }
+            public string DueDate { get; set; }
+            public string Priority { get; set; }
 
+            public ToDoItem(string des, string due, string pri)
+            {
+                Description = des;
+                DueDate = due;
+                Priority = pri;
+            }
+
+            public string myToDoList()
+            {
+                return (Description + " " + DueDate + " " + Priority);
+               
+
+            }
+           
+        }
     }
-}
 }

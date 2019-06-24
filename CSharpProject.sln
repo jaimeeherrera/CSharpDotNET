@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoCos", "PoCos\PoCos.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point_Demo", "SubClasses\Point_Demo.csproj", "{5259CE68-2A7E-431D-A0DA-3397D2740CCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkers", "Checkers\Checkers.csproj", "{187E5FE9-AB7E-422E-9182-126B7098E10F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checker101", "Checker101\Checker101.csproj", "{98224FF0-02B4-4783-86B6-CFF1A9DDDF89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{5259CE68-2A7E-431D-A0DA-3397D2740CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5259CE68-2A7E-431D-A0DA-3397D2740CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5259CE68-2A7E-431D-A0DA-3397D2740CCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{187E5FE9-AB7E-422E-9182-126B7098E10F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{187E5FE9-AB7E-422E-9182-126B7098E10F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{187E5FE9-AB7E-422E-9182-126B7098E10F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{187E5FE9-AB7E-422E-9182-126B7098E10F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98224FF0-02B4-4783-86B6-CFF1A9DDDF89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98224FF0-02B4-4783-86B6-CFF1A9DDDF89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98224FF0-02B4-4783-86B6-CFF1A9DDDF89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98224FF0-02B4-4783-86B6-CFF1A9DDDF89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
