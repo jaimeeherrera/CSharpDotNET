@@ -4,28 +4,51 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Carlot2
+namespace CarLot
 {
+    class CarLot 
+    {
+        public String Name { get; set; }
+        public List<string> Vehicles { get; set; } 
+        public static void AddVehicle() // Add Vehicle Method
+        {
+            //adding vehicle code
+        }
+        public virtual string PrintInventory() // To printInventory Method
+        {
+            // include amount of vehicles
+            // include details of each vehicle
+            return $"{Vehicles}"; 
+        }
+    }
+    abstract class Vehicle 
+    {
+        public String LicenseNumber { get; set; } 
+        public String Make { get; set; } 
+        public String Model { get; set; } 
+        public int Price { get; set; } 
+        public static string VehicleDetails() // Vehicle Details Method
+        {
+            // return a description of the vehicle
+            return $" ";
+        }
+    }
+    class Car : Vehicle 
+    {
+        public String Type { get; set; } 
+        public int NumberDoors { get; set; } 
+    }
+    class Truck : Vehicle // additional property to vehicle 
+    {
+        public String BedSize { get; set; }
+    }
     class Program
     {
-
-        static void Main(string[] args)
+        static void Main(string[] args) // "driver" for program
         {
-            class Carlot
-        {
-            public string name { get; set; }
-            public string Truck { get; set; }
-            public string Car { get; set; }
-            public string SUV { get; set; }
-
-        }
-        class Vehicle
-        {
-            public string license { get; set; } 
-            public string make { get; set;  }
-            public string model { get;get }
+            // instantiate 2 different car lots, and add various vehicles to the car lots
+            // Print out inventory with the correct info
             
-         
         }
     }
 }
