@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checker101", "Checker101\Ch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students", "Students\Students.csproj", "{54C70A28-4756-4448-99EC-DB9CC09EBBB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book Inventory", "Book Inventory\Book Inventory.csproj", "{C501FAEB-DFF3-45FA-80F0-13A1CA8AA401}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{54C70A28-4756-4448-99EC-DB9CC09EBBB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54C70A28-4756-4448-99EC-DB9CC09EBBB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54C70A28-4756-4448-99EC-DB9CC09EBBB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C501FAEB-DFF3-45FA-80F0-13A1CA8AA401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C501FAEB-DFF3-45FA-80F0-13A1CA8AA401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C501FAEB-DFF3-45FA-80F0-13A1CA8AA401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C501FAEB-DFF3-45FA-80F0-13A1CA8AA401}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

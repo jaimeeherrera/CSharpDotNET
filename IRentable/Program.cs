@@ -32,7 +32,7 @@ namespace IRentable
 public interface IRentable
 {
     void GetDailyRate();
-    void GetDescription():
+    void GetDescription();
 }
 
 public class Boat: IRentable 
