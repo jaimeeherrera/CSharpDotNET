@@ -7,7 +7,7 @@ namespace ToDoApp
         static void Main(string[] args)
         {
             App newApp = new App();
-            newApp.ProcessInput();
+            newApp.Startmenu();
         }
     }
 }

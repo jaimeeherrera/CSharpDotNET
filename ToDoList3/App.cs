@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ToDoList3
+namespace ToDoApp
+
 {
     public class App
     {
 
-        ItemRepository repo; 
         public App()
         {
             repo = new ItemRepository();
@@ -17,12 +17,19 @@ namespace ToDoList3
             List<ToDoItem> list = repo.GetToDoItems();
             ConsoleUtilities.(list);
         }
+        public void Startmenu()
+        {
+            //Display menu
+            DisplayALL();
+            string action = ConsoleUtilities.PrintMenu();
+
+        }
         public void Start()
         {
             //1. Display Menu 
             string action = ConsoleUtilities.PrintMenu();
             //2. Process user actions 
-            while (action! = "Quit")
+            while (action! == "Quit")
             {
                 if (action == "1") {
                     List<ToDoItem> list = repo.GetToDoItems();
