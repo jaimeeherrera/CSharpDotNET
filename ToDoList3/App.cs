@@ -4,12 +4,13 @@ using System.Text;
 
 namespace ToDoList3
 {
-    class App
+    public class App
     {
+
         ItemRepository repo; 
         public App()
         {
-
+            repo = new ItemRepository();
         }
         private void DisplayALL()
         {

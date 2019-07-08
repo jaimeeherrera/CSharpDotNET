@@ -23,7 +23,7 @@ namespace ToDoList3
         }
         public static void PrintToDoItems(List<ToDoItem> list)
             {
-            foreach(ToDoItem item in list) 
+            foreach (ToDoItem item in list) 
             {
                 Console.WriteLine($"{item.Id} - {item.Description } - {item.Status}");
             }

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
-namespace ToDoList3
+using System.IO;
+
+namespace ToDoApp
 {
     class ItemRepository
     {
@@ -32,7 +33,7 @@ namespace ToDoList3
             ToDoItem oldItem = context.ToDoItems.Where(Item => Item.Id == id).FirstOrDefault();
             oldItem.Description = newDescription;
             oldItem.Status = newStatus;
-            oldItem.DueDate = newDueDate;
+           // oldItem.DueDate = newDueDate;
             context.Update(oldItem);
             context.SaveChanges();
         }
@@ -49,10 +50,7 @@ namespace ToDoList3
             context.ToDoItems.Remove(oldItem);
             context.SaveChanges();
         }
-        public void MarkItem()
-        {
-
-        }
+      
         public List<ToDoItem> GetPendingItems()
         {
             IEnumerable<ToDoItem> list = context.ToDoItems.Where(item => item.Status == "Pending");

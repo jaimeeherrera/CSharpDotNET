@@ -1,14 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 using System.IO;
-using System.Collections.Generic;
-using System.Text;
 
-namespace ToDoList3
+
+namespace ToDoApp
 {
-    class ItemContext : DbContext
+    public class ItemContext : DbContext
     {
+
         public DbSet<ToDoItem> ToDoItems { get; set; }
+
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -18,16 +20,16 @@ namespace ToDoList3
             // get the base directory for the project
             DirectoryInfo ProjectBase = ExecutionDirectory.Parent.Parent.Parent;
 
-            // add 'students.db' to the project directory
-            String DatabaseFile = Path.Combine(ProjectBase.FullName, "ToDoItem.db");
+            // add 'ToDoItems.db' to the project directory
+            String DatabaseFile = Path.Combine(ProjectBase.FullName, "ToDoItems.db");
 
             // to check what the path of the file is, uncomment the file below
-            //Console.WriteLine("using database file :"+DatabaseFile);
-
+            //Console.WriteLine("using database file :" + DatabaseFile);
+            //ADD THE FILE PATH
             optionsBuilder.UseSqlite("Data Source=" + DatabaseFile);
         }
+
     }
 }
-    
-    
+
 

@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ToDoItem
+namespace ToDoApp
 {
-    class ToDoItem
+    public class ToDoItem
     {
         public int Id { get; private set; }
         public string Description { get; set; }
-        public string Status { get; set }
+        public string Status { get; set; }
+   
 
-        public DateTime DueDate { get; set; }
-        public ToDoItem(string Description, string Status, DateTime DueDate)
+        public ToDoItem(string description, string status)
         {
-            this.Description = Description;
-            this.Status = Status;
-            this.DueDate = DueDate;
+            this.Description = description;
+            this.Status = status;
+         
         }
     }
 }
